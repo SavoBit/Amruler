@@ -7,10 +7,10 @@ class DefaultRuleTest extends Specification {
   "DefaultRule" should {
     "Evaluates its condition" in {
 
-      val condition: Function[Int, Boolean] = num => num > 5
-      val action: Function[Int, String] = num => s"This is action1 for $num"
+      val condition = (num: Int) => num > 5
+      val action = (num:Int) => s"This is action1 for $num"
 
-      val rule = DefaultRule[Int, String](condition, List(action))
+      val rule = DefaultRule(condition, List(action))
 
       val result1 = rule.evaluate(6)
       val result2 = rule.evaluate(4)
