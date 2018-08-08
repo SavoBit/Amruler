@@ -3,7 +3,7 @@ package amruler.core
 import amruler.Specification
 import amruler.api.Rules
 import org.mockito.Mockito._
-import org.mockito.Matchers.any
+
 
 class DefaultRuleEngineTest extends Specification {
 
